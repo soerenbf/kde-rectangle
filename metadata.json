@@ -1,0 +1,16 @@
+{
+  "KPackageStructure": "KWin/Script",
+  "KPlugin": {
+    "Authors": [{ "Name": "Søren Bruus Zeppelin" }],
+    "Category": "Window Management",
+    "Description": "Cycle windows through half, two-thirds, and one-third screen widths",
+    "EnabledByDefault": true,
+    "Icon": "preferences-system-windows-script-test",
+    "Id": "kdeRectangle",
+    "License": "MIT",
+    "Name": "KDE Rectangle",
+    "Version": "0.1.0"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js"
+}

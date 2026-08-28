@@ -1,0 +1,9 @@
+.env
+.mcp.json
+.bash_profile
+.bashrc
+.gitconfig
+.profile
+.ripgreprc
+.zprofile
+.zshrc
