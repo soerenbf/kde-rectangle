@@ -2,6 +2,7 @@
 
 var fs = require('fs');
 var vm = require('vm');
+var assert = require('assert');
 var shortcuts = {};
 var win = {
     resizeable: true,
@@ -24,15 +25,22 @@ var context = {
 vm.runInNewContext(fs.readFileSync('contents/code/main.js', 'utf8'), context);
 
 shortcuts['Meta+Left']();
-console.assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 600);
+assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 600);
+assert(win.frameGeometry.y === 20 && win.frameGeometry.height === 800);
 shortcuts['Meta+Right']();
-console.assert(win.frameGeometry.x === 600 && win.frameGeometry.width === 600);
+assert(win.frameGeometry.x === 600 && win.frameGeometry.width === 600);
 shortcuts['Meta+Left']();
-console.assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 600);
+assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 600);
 shortcuts['Meta+Left']();
-console.assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 800);
+assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 800);
 shortcuts['Meta+Left']();
-console.assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 400);
+assert(win.frameGeometry.x === 0 && win.frameGeometry.width === 400);
 shortcuts['Meta+Right']();
-console.assert(win.frameGeometry.x === 600 && win.frameGeometry.width === 600);
+assert(win.frameGeometry.x === 600 && win.frameGeometry.width === 600);
+shortcuts['Meta+Down']();
+assert(win.frameGeometry.x === 300 && win.frameGeometry.width === 600);
+shortcuts['Meta+Down']();
+assert(win.frameGeometry.x === 200 && win.frameGeometry.width === 800);
+shortcuts['Meta+Down']();
+assert(win.frameGeometry.x === 400 && win.frameGeometry.width === 400);
 console.log('ok');

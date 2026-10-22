@@ -4,6 +4,7 @@ KWin 6 script providing Rectangle-style width cycling:
 
 - `Meta+Left`: left-aligned 1/2 → 2/3 → 1/3
 - `Meta+Right`: right-aligned 1/2 → 2/3 → 1/3
+- `Meta+Down`: centered 1/2 → 2/3 → 1/3
 
 ## Install
 
